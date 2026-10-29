@@ -1,7 +1,7 @@
 import SwiftUI
 
 @main
-struct SessionLauncherApp: App {
+struct TsuzukiApp: App {
     @StateObject private var model = LauncherModel()
 
     var body: some Scene {

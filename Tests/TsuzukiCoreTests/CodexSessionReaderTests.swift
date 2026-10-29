@@ -1,5 +1,5 @@
 import XCTest
-@testable import SessionLauncherCore
+@testable import TsuzukiCore
 
 final class CodexSessionReaderTests: XCTestCase {
     private let now = Date(timeIntervalSince1970: 10_000)

@@ -1,5 +1,5 @@
 import XCTest
-@testable import SessionLauncherCore
+@testable import TsuzukiCore
 
 final class ClaudeSessionReaderTests: XCTestCase {
     private let webapp = "/Users/me/work/acme/webapp"

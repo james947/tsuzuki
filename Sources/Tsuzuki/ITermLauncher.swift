@@ -1,5 +1,5 @@
 import AppKit
-import SessionLauncherCore
+import TsuzukiCore
 
 enum ITermLauncher {
     struct Failure: Error {
@@ -51,7 +51,7 @@ enum ITermLauncher {
     private static func describe(_ info: NSDictionary) -> String {
         let code = info[NSAppleScript.errorNumber] as? Int
         if code == -1743 {
-            return "Session Launcher isn't allowed to control iTerm. Turn it on in System Settings › Privacy & Security › Automation, then try again."
+            return "Tsuzuki isn't allowed to control iTerm. Turn it on in System Settings › Privacy & Security › Automation, then try again."
         }
         let message = info[NSAppleScript.errorMessage] as? String ?? "Unknown error"
         return "iTerm couldn't open the session: \(message)" + (code.map { " (\($0))" } ?? "")

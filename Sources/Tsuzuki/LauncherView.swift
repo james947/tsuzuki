@@ -1,5 +1,5 @@
 import AppKit
-import SessionLauncherCore
+import TsuzukiCore
 import SwiftUI
 
 struct LauncherView: View {

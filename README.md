@@ -1,4 +1,6 @@
-# Session Launcher
+# Tsuzuki
+
+*Tsuzuki* (続き) is Japanese for "the continuation", as in "to be continued…".
 
 A small macOS menu-bar app for finding Claude Code and Codex conversations and resuming them in a new iTerm tab, so you can close tabs without losing track of conversations.
 
@@ -8,7 +10,7 @@ Click the menu-bar icon, type a few letters of the title, project, note or last 
 
 - One list of Claude and Codex conversations: pinned first, then most recent.
 - Each row shows the provider, title, project, time since last activity and **the last thing you asked**.
-- **Pins** (★) and a one-line **next-step note** (✎) on any conversation. These are stored by the app in `~/Library/Application Support/SessionLauncher/marks.json`.
+- **Pins** (★) and a one-line **next-step note** (✎) on any conversation. These are stored by the app in `~/Library/Application Support/Tsuzuki/marks.json`.
 - Keyboard: type to search, ↑/↓ to move, Return to open, Esc to clear the search.
 - Right-click a row to copy the resume command or show the project in Finder.
 - A green dot means the conversation may already be open; opening it asks first. This is checked again at the moment you open it.
@@ -20,16 +22,16 @@ Requires macOS 14+, Xcode (Swift 5.9+) and iTerm.
 
 ```sh
 ./scripts/build-app.sh
-open "build/Session Launcher.app"
+open "build/Tsuzuki.app"
 ```
 
-To keep it around, drag `build/Session Launcher.app` into `/Applications`. Launch at login isn't built in yet; you can add the app under System Settings › General › Login Items.
+To keep it around, drag `build/Tsuzuki.app` into `/Applications`. Launch at login isn't built in yet; you can add the app under System Settings › General › Login Items.
 
 Run the tests with `swift test`.
 
 ### Permissions
 
-The first time you open a conversation, macOS asks whether Session Launcher may control iTerm. Allow it. If you declined earlier, turn it on under **System Settings › Privacy & Security › Automation › Session Launcher › iTerm**.
+The first time you open a conversation, macOS asks whether Tsuzuki may control iTerm. Allow it. If you declined earlier, turn it on under **System Settings › Privacy & Security › Automation › Tsuzuki › iTerm**.
 
 The build script signs the app with your Apple Development certificate when one is available, so this permission survives rebuilds. With ad-hoc signing (`SIGN_IDENTITY=- ./scripts/build-app.sh`), macOS may ask again after each rebuild.
 

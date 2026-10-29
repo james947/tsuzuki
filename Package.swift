@@ -2,24 +2,24 @@
 import PackageDescription
 
 let package = Package(
-    name: "SessionLauncher",
+    name: "Tsuzuki",
     platforms: [.macOS(.v14)],
     products: [
-        .executable(name: "SessionLauncher", targets: ["SessionLauncher"]),
-        .library(name: "SessionLauncherCore", targets: ["SessionLauncherCore"]),
+        .executable(name: "Tsuzuki", targets: ["Tsuzuki"]),
+        .library(name: "TsuzukiCore", targets: ["TsuzukiCore"]),
     ],
     targets: [
         .target(
-            name: "SessionLauncherCore",
+            name: "TsuzukiCore",
             linkerSettings: [.linkedLibrary("sqlite3")]
         ),
         .executableTarget(
-            name: "SessionLauncher",
-            dependencies: ["SessionLauncherCore"]
+            name: "Tsuzuki",
+            dependencies: ["TsuzukiCore"]
         ),
         .testTarget(
-            name: "SessionLauncherCoreTests",
-            dependencies: ["SessionLauncherCore"]
+            name: "TsuzukiCoreTests",
+            dependencies: ["TsuzukiCore"]
         ),
     ]
 )

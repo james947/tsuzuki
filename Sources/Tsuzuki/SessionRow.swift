@@ -1,4 +1,4 @@
-import SessionLauncherCore
+import TsuzukiCore
 import SwiftUI
 
 struct SessionRow: View, Equatable {

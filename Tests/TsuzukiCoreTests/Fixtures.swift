@@ -8,7 +8,7 @@ final class FixtureDirectory {
 
     init() throws {
         root = FileManager.default.temporaryDirectory
-            .appendingPathComponent("session-launcher-tests-\(UUID().uuidString)")
+            .appendingPathComponent("tsuzuki-tests-\(UUID().uuidString)")
         try FileManager.default.createDirectory(at: root, withIntermediateDirectories: true)
     }
 

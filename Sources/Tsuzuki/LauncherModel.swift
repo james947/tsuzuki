@@ -1,5 +1,5 @@
 import AppKit
-import SessionLauncherCore
+import TsuzukiCore
 
 @MainActor
 final class LauncherModel: ObservableObject {

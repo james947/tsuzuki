@@ -1,5 +1,5 @@
 import XCTest
-@testable import SessionLauncherCore
+@testable import TsuzukiCore
 
 final class WindowChooserTests: XCTestCase {
     private let windows = [

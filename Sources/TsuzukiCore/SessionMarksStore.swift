@@ -1,7 +1,7 @@
 import Foundation
 
 /// The app's own pins and next-step notes, keyed by `Session.id`. Stored in
-/// `~/Library/Application Support/SessionLauncher/marks.json`, never in provider files.
+/// `~/Library/Application Support/Tsuzuki/marks.json`, never in provider files.
 public struct SessionMark: Codable, Equatable, Sendable {
     /// nil follows the provider's own pin (Codex); an explicit value overrides it, so
     /// unpinning a Codex-pinned session is remembered.
@@ -25,7 +25,7 @@ public final class SessionMarksStore {
 
     public static var defaultURL: URL {
         let support = FileManager.default.urls(for: .applicationSupportDirectory, in: .userDomainMask)[0]
-        return support.appendingPathComponent("SessionLauncher/marks.json")
+        return support.appendingPathComponent("Tsuzuki/marks.json")
     }
 
     public func load() throws -> [String: SessionMark] {
